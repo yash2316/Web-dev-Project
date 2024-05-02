@@ -178,8 +178,8 @@ async function sendEmail(emailsList, mailContent) {
         host: "smtp.elasticemail.com",
   port: 2525,
   auth: {
-    user: "zerothtest@mail.com",
-    pass: "E6DADFA42CB201B8BA973C46DEA509951E20",
+    user: "",
+    pass: "",
   },
     });
 
