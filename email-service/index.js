@@ -108,7 +108,7 @@ app.get("/update-today-top-for-emails", async (req, res) => {
         summary = await getSummary(d.Url);
       } catch (error) {
         console.error("Failed to get summary:", error);
-        return; // Optionally handle this case differently
+        return; 
       }
 
       const data_obj = {
@@ -124,11 +124,11 @@ app.get("/update-today-top-for-emails", async (req, res) => {
         await db.collection('mail-template').doc(key).set(data_obj);
       } catch (error) {
         console.error("Failed to update mail template:", error);
-        // Handle error appropriately
+        
       }
     });
 
-    await Promise.all(promises); // Ensure all promises are resolved
+    await Promise.all(promises); 
     res.send({ data });
   } catch (e) {
     res.send({ "ERROR": e });
