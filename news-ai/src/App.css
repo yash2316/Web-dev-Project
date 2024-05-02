@@ -1,0 +1,215 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9f9f9f;
+  /* Light gray background */
+}
+
+/* App container styles */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  /* White background */
+  color: #2d2d2d;
+  /* Dark text color */
+  text-align: center;
+  position: relative;
+}
+
+header {
+  background-color: #111;
+}
+
+header h1 {
+  font-size: 40px;
+  /* Large heading font size */
+}
+
+/* Button styles */
+.btns {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 120px;
+  margin: 0px 5px;
+  transition: background-color 0.3s ease;
+
+}
+
+.btns:hover {
+  background-color: #b4b4b4;
+  /* Darker shade on hover */
+}
+
+/* Navbar styles */
+.nav-bar {
+  background-color: #292929;
+  color: white;
+
+}
+
+.nav-link- {
+
+  color: rgb(168, 168, 168);
+  text-align: center;
+  padding: 10px;
+  margin: 0px 5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link-:hover {
+  color: rgb(255, 255, 255);
+}
+
+.active {
+  color: white;
+}
+
+
+/* Search bar styles */
+.search-bar {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 400px;
+  /* Full width */
+  padding: 10px;
+  /* Padding for search bar */
+  border: none;
+  border-radius: 6px;
+  /* Rounded corners */
+  outline: none;
+  background-color: rgb(87, 87, 87);
+}
+
+
+.search-bar::placeholder {
+  color: rgb(193, 193, 193);
+  opacity: 1;
+  /* Firefox */
+  text-align: center;
+}
+
+.search-bar::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: rgb(193, 193, 193);
+  text-align: center;
+}
+
+/* Mobile optimization */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    justify-content: flex;
+  }
+
+  .grid-container- {
+    grid-template-columns: 1fr;
+    /* Single column layout */
+    justify-content: center;
+  }
+
+  .grid-item- {
+    padding-top: 5px;
+  }
+
+  .news-card {
+    width: 100%;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-self: end;
+  background-color: #ccc;
+  width: 100%;
+  padding: 10px;
+
+}
+
+.modal-view {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  position: fixed;
+}
+
+.full-width-button {
+  width: 100%;
+  height: 50px;
+}
+
+.news-grid {
+  width: 100%;
+  display: grid;
+  background-color: #d3d3d3;
+  grid-gap: 10px;
+  grid-auto-rows: auto;
+  justify-content: center;
+  border: 1px solid rgb(16, 198, 16);
+}
+
+.news-grid>* {
+  width: 100%;
+  border: 1px solid red;
+}
+
+.news-card {
+  width: 100%;
+  box-shadow: 0px 0px 10px rgb(189, 189, 189);
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.user-profile {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background: rgb(57, 225, 0);
+  background: linear-gradient(43deg, rgba(57, 225, 0, 1) 0%, rgba(186, 217, 28, 1) 57%, rgba(0, 212, 255, 1) 100%);
+  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+  border: 2px solid white;
+  transition-duration: 100ms;
+}
+
+.user-profile:hover {
+  scale: 1.2;
+}
+
+.user-profile-modal {
+  position: absolute;
+  background-color: white;
+  max-width: 400px;
+  height: 400px;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+position: relative;
+
+}
+
+.user-profile-modal >button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
